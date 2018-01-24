@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import date from './date.png'
+
 export const Label = styled.label`
   color: ${props => props.error ? "#ff5252":"#b7b7b7"};
   min-width: 160px;
@@ -79,6 +81,31 @@ export const WithLegend = (props) => {
     </WrapperLegend>
   )
 }
+
+const InputDate = Input.extend`
+  background: #fafafa url(${date}) no-repeat 90% 50%;
+`
+
+export const DateInput = ({id,
+  value,
+  error,
+  onChange,
+  onBlur,
+  ...props
+}) => {
+  return (
+    <InputDate
+      id={id}
+      value={value}
+      onChange={onChange}
+      onBlur={onBlur}
+      error={error}
+      {...props}
+    />
+  )
+}
+
+
 
 const Check = styled.input`
   outline: none;

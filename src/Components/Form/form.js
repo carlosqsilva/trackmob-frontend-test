@@ -4,7 +4,7 @@ import { withFormik } from 'formik'
 import Yup from 'yup'
 
 import Select from '../Inputs/select'
-import { Label, Submit, CheckBox, TextInput, WithLegend } from '../Inputs/input'
+import { Label, Submit, CheckBox, TextInput, DateInput, WithLegend } from '../Inputs/input'
 import { Tag, Title, Row, Segment } from '../Utils'
 import { validarCPF } from '../Utils/validation'
 import lock from './lock.png'
@@ -141,7 +141,7 @@ const InnerForm = (props) => {
         </Row>
         <Row>
           <Label error={errors.validity && touched.validity}>Validade do cartão</Label>
-          <TextInput
+          <DateInput
             id="validity"
             text="text"
             placeholder="MM/AAAA"
