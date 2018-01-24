@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './Components/Header/header'
 import Hero from './Components/Hero/hero'
 import Form from './Components/Form/form'
 import Footer from './Components/Footer/footer'

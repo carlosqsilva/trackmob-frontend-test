@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import date from './date.png'
-
 export const Input = styled.input`
   ${props => props.fluid && "flex: 1"};
   ${props => props.large && "max-width: 310px"};
