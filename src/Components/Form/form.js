@@ -4,7 +4,7 @@ import { withFormik } from 'formik'
 import Yup from 'yup'
 
 import Select from '../Inputs/select'
-import { Label, Submit, CheckBox, TextInput, DateInput, WithLegend } from '../Inputs/input'
+import { Label, Submit, CheckBox, TextInput, DateInput, WithLegend } from '../Inputs'
 import { Tag, Title, Row, Segment } from '../Utils'
 import { validarCPF } from '../Utils/validation'
 import lock from './lock.png'
