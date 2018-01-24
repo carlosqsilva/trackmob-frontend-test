@@ -55,7 +55,7 @@ const InnerForm = (props) => {
               placeholder="R$ 30,00"
               error={errors.value && touched.value}
               onChange={handleChange}
-              onBlur={handleBlur} />
+              onBlur={handleBlur} fluid />
           </WithLegend>
         </Row>
       </Segment>
@@ -75,7 +75,7 @@ const InnerForm = (props) => {
             placeholder="Primeiro nome"
             error={errors.first_name && touched.first_name}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleBlur} fluid
           />
           <TextInput
             id="last_name"
@@ -83,7 +83,7 @@ const InnerForm = (props) => {
             placeholder="Sobrenome"
             error={errors.last_name && touched.last_name}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleBlur} fluid
           />
         </Row>
         <Row>
@@ -94,7 +94,7 @@ const InnerForm = (props) => {
             placeholder="email@email.com"
             error={errors.email && touched.email}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleBlur} fluid
           />
         </Row>
       </Segment>
@@ -110,7 +110,7 @@ const InnerForm = (props) => {
             maxLength="11"
             error={errors.document && touched.document}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleBlur} normal
           />
         </Row>
         <Row>
@@ -127,7 +127,7 @@ const InnerForm = (props) => {
             placeholder="0000 0000 0000 0000"
             error={errors.card_number && touched.card_number}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleBlur} large
           />
           <TextInput
             id="cvv"
@@ -136,7 +136,7 @@ const InnerForm = (props) => {
             placeholder="cvv"
             error={errors.cvv && touched.cvv}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleBlur} small
           />
         </Row>
         <Row>
@@ -147,7 +147,7 @@ const InnerForm = (props) => {
             placeholder="MM/AAAA"
             error={errors.validity && touched.validity}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleBlur} normal
           />
         </Row>
       </Segment>

@@ -25,13 +25,17 @@ export const Submit = styled.input`
 const WrapperLegend = styled.div`
   background-color: #f5f5f5;
   border-radius: 4px;
-  padding: 20px 20px 20px 0px;
+  padding: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   flex: 1;
+  width: 100%;
+  > input {
+    margin: 0;
+  }
   > span {
     display: block;
-    margin-left: 20px;
     font-size: .7rem;
     color: #b5b5b5;
   }

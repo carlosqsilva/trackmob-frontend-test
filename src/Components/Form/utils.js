@@ -14,7 +14,11 @@ export const Segment = styled.div`
   }
   &:last-child {
     background-color: #f5f5f5;
-}
+  }
+
+  @media screen and (max-width: 550px){
+    padding: 20px 30px 10px 30px;
+  }
 `
 
 export const Row = styled.div`
@@ -23,6 +27,11 @@ export const Row = styled.div`
   justify-content: flex-start;
   align-items: center;
   margin-top: 15px;
+
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 export const Title = styled.h1`

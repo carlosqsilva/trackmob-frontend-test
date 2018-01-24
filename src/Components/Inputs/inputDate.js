@@ -1,11 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { Input } from './input'
 import date from './date.png'
 
 const InputDate = Input.extend`
-  background: #fafafa url(${date}) no-repeat 90% 50%;
+  background: #fafafa url(${date}) no-repeat 95% 50%;
+  padding-right: 2rem;
 `
 
 export const DateInput = ({id,
