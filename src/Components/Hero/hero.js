@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Header from '../Header/header'
 import banner from './banner.png'
 
 const Wrapper = styled.section`
@@ -11,10 +12,12 @@ const Wrapper = styled.section`
   overflow: auto;
   display: grid;
   grid-template-columns: 1fr minmax(300px, 880px) 1fr;
+  position: relative;
 `
 
 const Container = styled.div`
   grid-column: 2;
+  padding: 0px 10px;
   margin-top: 200px;
   font-size: 16px;
 `
@@ -28,12 +31,13 @@ const Title = styled.h1`
 const Text = styled.p`
   font-size: 1.2em;
   color: #868686;
-  margin-right: 220px;
+  margin-right: 20%;
 `
 
 const Hero = (props) => {
   return (
     <Wrapper>
+      <Header />
       <Container>
         <Title>Thanks for Your Support!</Title>
         <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec tellus viverra, mattis turpis eget, vehicula dui. Nulla accumsan nulla et mi semper, in ornare dolor faucibus. Praesent lobortis magna sed massa pretium lacinia.</Text>

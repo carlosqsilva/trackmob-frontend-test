@@ -12,6 +12,9 @@ const Wrapper = styled.header`
   background-color: white;
   display: grid;
   grid-template-columns: 1fr minmax(300px, 1320px) 1fr;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 `
 
 const Container = styled.div`

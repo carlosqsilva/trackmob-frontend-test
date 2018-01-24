@@ -24,6 +24,7 @@ const Container = styled.form`
   border-radius: 4px;
   margin: 0px 10px;
   overflow: hidden;
+  z-index: 999;
 `
 
 const InnerForm = (props) => {
