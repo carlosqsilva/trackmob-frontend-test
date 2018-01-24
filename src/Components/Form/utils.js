@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import alert from './alert.png'
+
 export const Segment = styled.div`
-  padding: 30px 40px 20px 40px;
+  padding: 30px 40px 25px 40px;
   width: 100%;
   min-height: 100px;
   display: flex;
@@ -14,7 +16,7 @@ export const Segment = styled.div`
   }
   &:last-child {
     background-color: #f5f5f5;
-    padding: 10px 40px 20px 40px;
+    padding: 10px 40px 25px 40px;
   }
 
   @media screen and (max-width: 550px){
@@ -75,13 +77,38 @@ export const Tag = (props) => {
 }
 
 export const Result = (props) => {
-  const { value, frequency, ...other } = props
+  const { value, frequency } = props
   const period = ["unico", "mensais", "semestrais","anuais"]
   const index = ["Unica", "Mensal", "Semestral", "Anual"].indexOf(frequency)
-  if (value) {
+  if (Number(value)) {
     return <h2
       style={{fontSize: 16, marginTop: 5, color: "#424242"}}
     >{`R$ ${props.value} ${period[index]}`}</h2>
   }
   return null 
+}
+
+const Error = styled.div`
+  flex: 1;
+  height: 55px;
+  color: white;
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ff5252;
+`
+
+export const Alert = (props) => {
+  if (props.error) {
+    return (
+      <Error>
+        <img src={alert} alt="" />
+        <span style={{ marginLeft: 20}}>Corrija os campos abaixo</span>
+      </Error>
+    )
+  }
+  return null
 }
