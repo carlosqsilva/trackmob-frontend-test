@@ -55,9 +55,9 @@ const Header = (props) => {
         <Right>
           <span>Compartilhe</span>
           <div>
-            <img src={facebook} alt="facebook" />
-            <img src={instagram} alt="instagram" />
-            <img src={twitter} alt="twitter" />
+            <a href="" target="_blank"><img src={facebook} alt="facebook" /></a>
+            <a href="" target="_blank"><img src={instagram} alt="instagram" /></a>
+            <a href="" target="_blank"><img src={twitter} alt="twitter" /></a>
           </div>
         </Right>
       </Container>
