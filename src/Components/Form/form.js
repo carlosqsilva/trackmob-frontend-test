@@ -5,8 +5,8 @@ import Yup from 'yup'
 
 import Select from '../Inputs/select'
 import { Label, Submit, CheckBox, TextInput, DateInput, WithLegend } from '../Inputs'
-import { Tag, Title, Row, Segment } from '../Utils'
-import { validarCPF } from '../Utils/validation'
+import { Tag, Title, Row, Segment } from './utils'
+import { validarCPF } from './cpf'
 import lock from './lock.png'
 
 const Wrapper = styled.section`
