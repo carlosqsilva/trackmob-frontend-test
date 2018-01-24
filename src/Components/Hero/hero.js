@@ -18,8 +18,15 @@ const Wrapper = styled.section`
 const Container = styled.div`
   grid-column: 2;
   padding: 0px 10px;
-  margin-top: 200px;
+  margin-top: 260px;
+  margin-right: 20%;
   font-size: 16px;
+
+  @media screen and (max-width: 550px){
+    margin-top: 220px;
+    font-size: 12px;
+    margin-right: 0px;
+  }
 `
 
 const Title = styled.h1`
@@ -31,7 +38,6 @@ const Title = styled.h1`
 const Text = styled.p`
   font-size: 1.2em;
   color: #868686;
-  margin-right: 20%;
 `
 
 const Hero = (props) => {
