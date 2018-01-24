@@ -5,7 +5,7 @@ import Yup from 'yup'
 
 import Select from '../Inputs/select'
 import { Label, Submit, CheckBox, TextInput, DateInput, WithLegend } from '../Inputs'
-import { Tag, Title, Row, Segment } from './utils'
+import { Tag, Title, Row, Segment, Column, Result } from './utils'
 import { validarCPF } from './cpf'
 import lock from './lock.png'
 
@@ -153,12 +153,19 @@ const InnerForm = (props) => {
       </Segment>
 
       <Segment>
-        <Submit type="submit" value="Confirmar doação" />
-        <CheckBox
-          id="accept_contact"
-          checked={values.accept_contact}
-          onChange={handleChange}
-        >Aceito ser contatado para receber informações sobre a ONG</CheckBox>
+        <Row>
+          <Column>
+            <Result frequency={values.frequency} value={values.value}/>
+          </Column>
+          <Column fluid>
+            <Submit type="submit" value="Confirmar doação" />
+            <CheckBox
+              id="accept_contact"
+              checked={values.accept_contact}
+              onChange={handleChange}
+            >Aceito ser contatado para receber informações sobre a ONG</CheckBox>
+          </Column>
+        </Row>
       </Segment>
     </Container>
   )

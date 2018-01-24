@@ -14,6 +14,7 @@ export const Segment = styled.div`
   }
   &:last-child {
     background-color: #f5f5f5;
+    padding: 10px 40px 20px 40px;
   }
 
   @media screen and (max-width: 550px){
@@ -32,6 +33,15 @@ export const Row = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
+`
+
+export const Column = styled.div`
+  ${props => props.fluid && "flex: 1"};
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 185px;
 `
 
 export const Title = styled.h1`
@@ -62,4 +72,16 @@ export const Tag = (props) => {
       <span>{props.children}</span>
     </Badge>
   )
+}
+
+export const Result = (props) => {
+  const { value, frequency, ...other } = props
+  const period = ["unico", "mensais", "semestrais","anuais"]
+  const index = ["Unica", "Mensal", "Semestral", "Anual"].indexOf(frequency)
+  if (value) {
+    return <h2
+      style={{fontSize: 16, marginTop: 5, color: "#424242"}}
+    >{`R$ ${props.value} ${period[index]}`}</h2>
+  }
+  return null 
 }

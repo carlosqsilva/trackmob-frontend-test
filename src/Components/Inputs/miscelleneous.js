@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Label = styled.label`
   color: ${props => props.error ? "#ff5252":"#b7b7b7"};
-  min-width: 160px;
+  min-width: 165px;
   font-size: 1rem;
   &:after {
     content: " *";
