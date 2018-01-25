@@ -112,7 +112,7 @@ const InnerForm = (props) => {
       </Segment>
 
       <Segment>
-        <Alert error={ alert.document || alert.card_number || alert.cvv } />
+        <Alert error={ alert.document || alert.card_number || alert.cvv || alert.date } />
         <Title>Dados de pagamento<Tag src={lock}>DADOS SEGUROS</Tag></Title>
         <Row>
           <Label error={alert.document}>CPF</Label>
@@ -127,7 +127,7 @@ const InnerForm = (props) => {
           />
         </Row>
         <Row>
-          <Label error={ alert.card_number || alert.cvv }>Numero do cartão</Label>
+          <Label error={ alert.card_number || alert.cvv }>Número do cartão</Label>
           <TextInput
             id="card_number"
             type="text"
@@ -205,7 +205,7 @@ const FinalForm = withFormik({
     first_name: Yup.string().min(2).required(),
     last_name: Yup.string().min(2).required(),
     email: Yup.string().email().required(),
-    document: Yup.string().required().validarCPF("Required"),
+    document: Yup.string().validarCPF("Required").required(),
     card_number: Yup.string().min(16).required(),
     cvv: Yup.string().min(3).required(),
     date: Yup.date().min(new Date()).required(),
