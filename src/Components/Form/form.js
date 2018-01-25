@@ -33,6 +33,7 @@ const InnerForm = (props) => {
   const {
     values,
     touched,
+    status,
     errors,
     handleChange,
     handleBlur,
@@ -82,6 +83,7 @@ const InnerForm = (props) => {
             id="first_name"
             type="text"
             placeholder="Primeiro nome"
+            value={values.first_name}
             error={alert.first_name}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -91,6 +93,7 @@ const InnerForm = (props) => {
             id="last_name"
             type="text"
             placeholder="Sobrenome"
+            value={values.last_name}
             error={alert.last_name}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -103,6 +106,7 @@ const InnerForm = (props) => {
             id="email"
             type="email"
             placeholder="email@email.com"
+            value={values.email}
             error={alert.email}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -121,6 +125,7 @@ const InnerForm = (props) => {
             type="text"
             placeholder="000.000.000-00"
             maxLength="11"
+            value={values.document}
             error={alert.document}
             onChange={handleChange}
             onBlur={handleBlur} normal
@@ -133,6 +138,7 @@ const InnerForm = (props) => {
             type="text"
             maxLength="16"
             placeholder="0000 0000 0000 0000"
+            value={values.card_number}
             error={alert.card_number}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -143,6 +149,7 @@ const InnerForm = (props) => {
             type="text"
             maxLength="3"
             placeholder="cvv"
+            value={values.cvv}
             error={alert.cvv}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -155,6 +162,7 @@ const InnerForm = (props) => {
             id="date"
             text="text"
             placeholder="dd/mm/aaaa"
+            value={values.date}
             error={alert.date}
             onChange={handleChange}
             onBlur={handleBlur}
@@ -166,7 +174,7 @@ const InnerForm = (props) => {
       <Segment>
         <Row>
           <Column>
-            <Result frequency={values.frequency} value={values.value}/>
+            <Result frequency={values.frequency} value={values.value} status={status}/>
           </Column>
           <Column fluid>
             <Submit type="submit" value="Confirmar doação" />
@@ -197,10 +205,16 @@ Yup.addMethod(Yup.string, 'validarCPF', function (message) {
 const FinalForm = withFormik({
   mapPropsToValues: () => ({
     accept_contact: true,
-    frequency: "Semestral",
+    frequency: "semestrais",
+    first_name: "",
+    last_name: "",
+    email: "",
+    document: "",
+    card_number: "",
+    cvv: "",
+    date: ""
   }),
   validationSchema: Yup.object().shape({
-    frequency: Yup.mixed().oneOf(["Unica", "Mensal", "Semestral", "Anual"]),
     value: Yup.number().positive().min(15).required(),
     first_name: Yup.string().min(2).required(),
     last_name: Yup.string().min(2).required(),
@@ -209,15 +223,14 @@ const FinalForm = withFormik({
     card_number: Yup.string().min(16).required(),
     cvv: Yup.string().min(3).required(),
     date: Yup.date().min(new Date()).required(),
-    accept_contact: Yup.boolean().required(),
   }),
-  handleSubmit: (values) => {
+  handleSubmit: (values, { resetForm, setStatus }) => {
     const { date, ...others } = values
     const validity = date.split("/").slice(1).join("/")
     const complete_name = `${values.first_name} ${values.last_name}` 
     apiPOST({...others, complete_name, validity}).then( resp => {
       if (resp) {
-        console.log("OK")
+        setStatus(true)
       }
     })
   }

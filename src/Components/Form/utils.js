@@ -77,13 +77,13 @@ export const Tag = (props) => {
 }
 
 export const Result = (props) => {
-  const { value, frequency } = props
-  const period = ["unico", "mensais", "semestrais","anuais"]
-  const index = ["Unica", "Mensal", "Semestral", "Anual"].indexOf(frequency)
+  const { value, frequency, status } = props
+  const style = {fontSize: 16, marginTop: 5, color: "#424242"}
   if (Number(value)) {
-    return <h2
-      style={{fontSize: 16, marginTop: 5, color: "#424242"}}
-    >{`R$ ${props.value} ${period[index]}`}</h2>
+    if (status) {
+      return <h2 style={style}>Doação realizada!</h2>
+    }
+    return <h2 style={style}>{`R$ ${props.value} ${frequency}`}</h2>
   }
   return null 
 }

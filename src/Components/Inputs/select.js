@@ -29,10 +29,10 @@ const Select = ({
   return (
     <Wrapper>
       <Container id={id} value={value} onChange={onChange} onBlur={onBlur} {...props}>
-        <option>Unica</option>
-        <option>Mensal</option>
-        <option>Semestral</option>
-        <option>Anual</option>
+        <option value="unico" >Unica</option>
+        <option value="mensais">Mensal</option>
+        <option value="semestrais">Semestral</option>
+        <option value="anuais">Anual</option>
       </Container>
     </Wrapper>
   )
