@@ -3,7 +3,7 @@ const checker = (str) => {
   let sum = str.split('').reduce((acumulator, value, index) => {
     return acumulator + value * (num-index)
   }, 0)
-  const check = sum % 11 
+  const check = sum % 11
   return (check < 2) ? 0: 11 - check
 }
 
@@ -23,7 +23,7 @@ export const validarCPF = (values) => {
   
   // valor calculado é igual ao fornecido?
   if (str.substring(9,11) === v1.toString() + v2.toString()) {
-    return false
+    return true
   }
   return false    
 }
