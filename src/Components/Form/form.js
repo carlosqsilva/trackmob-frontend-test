@@ -51,7 +51,7 @@ const InnerForm = (props) => {
   }
 
   return (
-    <Container onSubmit={handleSubmit} >
+    <Container onSubmit={handleSubmit} autoComplete="on" >
 
       <Segment>
         <Title>Selecione um valor</Title>
@@ -84,7 +84,8 @@ const InnerForm = (props) => {
             placeholder="Primeiro nome"
             error={alert.first_name}
             onChange={handleChange}
-            onBlur={handleBlur} fluid
+            onBlur={handleBlur}
+            autoComplete="given-name" fluid
           />
           <TextInput
             id="last_name"
@@ -92,7 +93,8 @@ const InnerForm = (props) => {
             placeholder="Sobrenome"
             error={alert.last_name}
             onChange={handleChange}
-            onBlur={handleBlur} fluid
+            onBlur={handleBlur}
+            autoComplete="family-name" fluid
           />
         </Row>
         <Row>
@@ -103,7 +105,8 @@ const InnerForm = (props) => {
             placeholder="email@email.com"
             error={alert.email}
             onChange={handleChange}
-            onBlur={handleBlur} fluid
+            onBlur={handleBlur}
+            autoComplete="email" fluid
           />
         </Row>
       </Segment>
@@ -132,7 +135,8 @@ const InnerForm = (props) => {
             placeholder="0000 0000 0000 0000"
             error={alert.card_number}
             onChange={handleChange}
-            onBlur={handleBlur} large
+            onBlur={handleBlur}
+            autoComplete="off" large
           />
           <TextInput
             id="cvv"
@@ -141,7 +145,8 @@ const InnerForm = (props) => {
             placeholder="cvv"
             error={alert.cvv}
             onChange={handleChange}
-            onBlur={handleBlur} small
+            onBlur={handleBlur}
+            autoComplete="off" small
           />
         </Row>
         <Row>
@@ -152,7 +157,8 @@ const InnerForm = (props) => {
             placeholder="dd/mm/aaaa"
             error={alert.date}
             onChange={handleChange}
-            onBlur={handleBlur} normal
+            onBlur={handleBlur}
+            autoComplete="off" normal
           />
         </Row>
       </Segment>
