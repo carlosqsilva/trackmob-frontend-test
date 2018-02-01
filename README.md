@@ -2,6 +2,14 @@
 
 [Projeto final](http://trackmob-test.surge.sh)
 
+* [x] Use React
+* [x] Implemente máscaras e validação para todos os campos
+* [x] Implemente validação no evento de blur
+* [x] Faça o layout responsivo
+* [ ] Torne o layout acessível
+* [x] Publique sua aplicação e nos mande o link para acesso
+* [ ] Adicione uma boa cobertura de testes no seu código
+
 # **Trackmob - Teste para Frontend - Página de Doação**
 
 ## Sobre este teste
@@ -21,12 +29,12 @@ Você será responsável por implementar a página abaixo (você pode baixar o P
 
 Você deve executar os seguintes pontos:
 
-- Finalizar a página seguindo as guias e o exemplo no arquivo PSD (use o GIMP caso não possua o Photoshop)
-- Implementar a validação de e-mail, exibindo o erro como no exemplo.
-- O selectbox de frequência deve ter as seguintes opções: "Única", "Mensal", "Semestral", "Anual"
-- O valor inserido e a frequência devem mudar o valor ao lado do botão de confirmação (R$ 35 mensais no exemplo)
-- Todos os campos são necessário, mostre com um erro os campos esquecidos ao submeter o formulário
-- Se todo os campos estiverem preenchidos e validados, você deve enviar os dados para a API REST
+* Finalizar a página seguindo as guias e o exemplo no arquivo PSD (use o GIMP caso não possua o Photoshop)
+* Implementar a validação de e-mail, exibindo o erro como no exemplo.
+* O selectbox de frequência deve ter as seguintes opções: "Única", "Mensal", "Semestral", "Anual"
+* O valor inserido e a frequência devem mudar o valor ao lado do botão de confirmação (R$ 35 mensais no exemplo)
+* Todos os campos são necessário, mostre com um erro os campos esquecidos ao submeter o formulário
+* Se todo os campos estiverem preenchidos e validados, você deve enviar os dados para a API REST
 
 ## API REST
 
@@ -36,6 +44,7 @@ Você irá executar um POST na sequinte URL:
 Troque **<github_username>** pelo seu login no github
 
 Envie os dados no seguinte formato JSON:
+
 ```javascript
 {
 	"frequency": "Mensal",
@@ -54,18 +63,18 @@ Envie os dados no seguinte formato JSON:
 
 ## Tarefas Bônus
 
-- Use React
-- Implemente máscaras e validação para todos os campos
-- Implemente validação no evento de blur
-- Faça o layout responsivo
-- Torne o layout acessível
-- Publique sua aplicação e nos mande o link para acesso
-- Adicione uma boa cobertura de testes no seu código
+* Use React
+* Implemente máscaras e validação para todos os campos
+* Implemente validação no evento de blur
+* Faça o layout responsivo
+* Torne o layout acessível
+* Publique sua aplicação e nos mande o link para acesso
+* Adicione uma boa cobertura de testes no seu código
 
 ## Critérios de avaliação
 
-- Código limpo, bem estruturado e bem comentado
-- Fidelidade ao layout
-- Bom uso de git
-- Qualidade e quantidade de bônus implementados
-- Experiência do usuário
+* Código limpo, bem estruturado e bem comentado
+* Fidelidade ao layout
+* Bom uso de git
+* Qualidade e quantidade de bônus implementados
+* Experiência do usuário
