@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import InputMask from "react-input-mask"
 import date from "./date.png"
+import arrow from "./arrow.png"
 import "./style.css"
 
 const Text = ({
@@ -49,6 +50,41 @@ const Mask = ({
       onChange={onChange}
       onBlur={onBlur}
     />
+  )
+}
+
+export const Select = ({ id, value, onChange, onBlur, ...props }) => {
+  return (
+    <dic className="selectinput-container">
+      <select
+        className="selectinput"
+        id={id}
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        {...props}
+      >
+        <option value="unico">Unica</option>
+        <option value="mensais">Mensal</option>
+        <option value="semestrais">Semestral</option>
+        <option value="anuais">Anual</option>
+      </select>
+    </dic>
+  )
+}
+
+export const CheckBox = ({ id, checked, onChange, children }) => {
+  return (
+    <label className="checkbox--label">
+      <input
+        className="checkbox"
+        id={id}
+        type="checkbox"
+        checked={checked}
+        onChange={onChange}
+      />
+      {children}
+    </label>
   )
 }
 

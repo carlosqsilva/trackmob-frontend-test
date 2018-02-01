@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Yup from "yup"
 import { withFormik } from "formik"
 import { apiPOST } from "./apiCall"
-import { validarCPF, validarData } from "./cpf"
+import { validarCPF, validarData } from "./validation"
 import InnerForm from "./innerFom"
 
 const Wrapper = styled.section`
