@@ -1,7 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-
-import alert from './alert.png'
+import React from "react"
+import styled from "styled-components"
+import alert from "./alert.png"
 
 export const Segment = styled.div`
   padding: 30px 40px 25px 40px;
@@ -19,7 +18,7 @@ export const Segment = styled.div`
     padding: 10px 40px 25px 40px;
   }
 
-  @media screen and (max-width: 550px){
+  @media screen and (max-width: 550px) {
     padding: 20px 30px 10px 30px;
   }
 `
@@ -56,7 +55,7 @@ const Badge = styled.div`
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: .65rem;
+  font-size: 0.65rem;
   font-weight: normal;
   margin-left: 5px;
   padding: 6px;
@@ -67,25 +66,25 @@ const Badge = styled.div`
   }
 `
 
-export const Tag = (props) => {
+export const Tag = props => {
   return (
     <Badge>
-      <img src={props.src}  width={14} height={14} alt="" />
+      <img src={props.src} width={14} height={14} alt="" />
       <span>{props.children}</span>
     </Badge>
   )
 }
 
-export const Result = (props) => {
+export const Result = props => {
   const { value, frequency, status } = props
-  const style = {fontSize: 16, marginTop: 5, color: "#424242"}
+  const style = { fontSize: 16, marginTop: 5, color: "#424242" }
   if (Number(value)) {
     if (status) {
       return <h2 style={style}>Doação realizada!</h2>
     }
     return <h2 style={style}>{`R$ ${props.value} ${frequency}`}</h2>
   }
-  return null 
+  return null
 }
 
 const Error = styled.div`
@@ -101,12 +100,12 @@ const Error = styled.div`
   background-color: #ff5252;
 `
 
-export const Alert = (props) => {
+export const Alert = props => {
   if (props.error) {
     return (
       <Error>
         <img src={alert} alt="" />
-        <span style={{ marginLeft: 20}}>Corrija os campos abaixo</span>
+        <span style={{ marginLeft: 20 }}>Corrija os campos abaixo</span>
       </Error>
     )
   }

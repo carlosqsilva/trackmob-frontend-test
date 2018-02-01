@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
 export const Label = styled.label`
-  color: ${props => props.error ? "#ff5252":"#b7b7b7"};
+  color: ${props => (props.error ? "#ff5252" : "#b7b7b7")};
   min-width: 165px;
   font-size: 1rem;
   &:after {
@@ -36,12 +36,12 @@ const WrapperLegend = styled.div`
   }
   > span {
     display: block;
-    font-size: .7rem;
+    font-size: 0.7rem;
     color: #b5b5b5;
   }
 `
 
-export const WithLegend = (props) => {
+export const WithLegend = props => {
   return (
     <WrapperLegend>
       {props.children}

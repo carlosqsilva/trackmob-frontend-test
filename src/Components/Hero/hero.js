@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import Header from '../Header/header'
-import banner from './banner.png'
+import React from "react"
+import styled from "styled-components"
+import Header from "../Header/header"
+import banner from "./banner.png"
 
 const Wrapper = styled.section`
   width: 100%;
@@ -22,7 +22,7 @@ const Container = styled.div`
   margin-right: 20%;
   font-size: 16px;
 
-  @media screen and (max-width: 550px){
+  @media screen and (max-width: 550px) {
     margin-top: 220px;
     font-size: 12px;
     margin-right: 0px;
@@ -40,13 +40,18 @@ const Text = styled.p`
   color: #868686;
 `
 
-const Hero = (props) => {
+const Hero = props => {
   return (
     <Wrapper>
       <Header />
       <Container>
         <Title>Thanks for Your Support!</Title>
-        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec tellus viverra, mattis turpis eget, vehicula dui. Nulla accumsan nulla et mi semper, in ornare dolor faucibus. Praesent lobortis magna sed massa pretium lacinia.</Text>
+        <Text>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec
+          tellus viverra, mattis turpis eget, vehicula dui. Nulla accumsan nulla
+          et mi semper, in ornare dolor faucibus. Praesent lobortis magna sed
+          massa pretium lacinia.
+        </Text>
       </Container>
     </Wrapper>
   )

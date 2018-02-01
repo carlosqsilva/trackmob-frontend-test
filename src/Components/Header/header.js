@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
-import brand from './brand.png'
-import facebook from './facebook.png'
-import instagram from './instagram.png'
-import twitter from './twitter.png'
+import React from "react"
+import styled from "styled-components"
+import brand from "./brand.png"
+import facebook from "./facebook.png"
+import instagram from "./instagram.png"
+import twitter from "./twitter.png"
 
 const Wrapper = styled.header`
   width: 100%;
@@ -25,7 +25,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media screen and (max-width: 550px){
+  @media screen and (max-width: 550px) {
     flex-direction: column;
   }
 `
@@ -50,7 +50,7 @@ const Right = styled.div`
   }
 `
 
-const Header = (props) => {
+const Header = props => {
   return (
     <Wrapper>
       <Container>
@@ -58,9 +58,15 @@ const Header = (props) => {
         <Right>
           <span>Compartilhe</span>
           <div>
-            <a href="" target="_blank"><img src={facebook} alt="facebook" /></a>
-            <a href="" target="_blank"><img src={instagram} alt="instagram" /></a>
-            <a href="" target="_blank"><img src={twitter} alt="twitter" /></a>
+            <a href="" target="_blank">
+              <img src={facebook} alt="facebook" />
+            </a>
+            <a href="" target="_blank">
+              <img src={instagram} alt="instagram" />
+            </a>
+            <a href="" target="_blank">
+              <img src={twitter} alt="twitter" />
+            </a>
           </div>
         </Right>
       </Container>
